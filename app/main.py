@@ -1,18 +1,21 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(self, name: str,
+                 appetite: int,
+                 is_hungry: bool = True
+                 ) -> None:
         """
                 Initialize an Animal instance.
 
                 Args:
                     name (str): The name of the animal
-                    appetite (int): The appetite level of the animal (how much it can eat)
+                    appetite (int):How much it can eat
                     is_hungry (bool): Hunger state (defaults to True)
                 """
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self):
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
@@ -37,6 +40,7 @@ class Dog(Animal):
 
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
+
 
 @staticmethod
 def feed_animals(animals: list[Animal]) -> int:
